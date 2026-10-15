@@ -27,6 +27,10 @@ dependencies:
   - pip:
       - openpopcon @ git+https://github.com/hansec/OpenPOPCON.git@9e70f06df1e8c16df0191730036f5cd00d9e904c
       - cfspopcon==9.0.0
+      - fortranformat==2.0.3
+      - meson==1.12.1
+      - ninja==1.13.2
+      - radas==1!1.0.1
 variables:
   # This link uses the existing library on this computer.
   OPENMC_CROSS_SECTIONS: /home/youeric/ZachClass/OPENMC/data/endfb-viii.1/cross_sections.xml
