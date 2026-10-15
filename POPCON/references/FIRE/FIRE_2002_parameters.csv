@@ -1,0 +1,30 @@
+parameter,unit,H_mode,reversed_shear_AT,note
+major_radius,m,2.14,2.14,
+minor_radius,m,0.595,0.595,
+elongation_separatrix,dimensionless,2.0,2.0,kappa_x
+elongation_area,dimensionless,1.85,1.85,kappa_a
+elongation_95,dimensionless,1.82,1.82,kappa_95
+triangularity_separatrix,dimensionless,0.7,0.7,delta_x
+triangularity_95,dimensionless,0.47,0.55,delta_95
+safety_factor_axis,dimensionless,1.0,4.0,q(0)
+safety_factor_minimum,dimensionless,1.0,2.2,q_min
+safety_factor_95,dimensionless,3.15,3.5,q_95
+internal_inductance,dimensionless,0.7,0.5,li(3)
+toroidal_field_on_axis,T,10,6.5,at the major radius
+plasma_current,MA,7.7,4.5,
+density_peaking,dimensionless,1.1,1.5,n(0)/mean(n) as labeled in Table I
+temperature_peaking,dimensionless,2.5,3.0,T(0)/mean(T) as labeled in Table I
+greenwald_fraction,dimensionless,0.7,0.73,n/n_GW as labeled in Table I
+volume_average_density,1e20 m^-3,4.5,2.4,
+effective_charge,dimensionless,1.5,2.0,Z_eff
+confinement_multiplier_98y2,dimensionless,1.03,1.7,H98(y2)
+confinement_multiplier_two_term,dimensionless,0.87,1.5,
+loss_power_over_LH_threshold,dimensionless,1.3,3.0,
+energy_confinement_time,s,0.95,0.6,
+burn_duration_over_current_redistribution_time,dimensionless,2.0,3.2,
+fusion_gain,dimensionless,10,4.8,P_fusion/(P_aux + P_OH)
+fusion_power,MW,150,140,
+beta,percent,2.2,4.0,
+normalized_beta,dimensionless,1.7,4.2,beta_N in the paper's convention
+poloidal_beta,dimensionless,0.7,2.15,
+bootstrap_current_fraction,percent,25,74,

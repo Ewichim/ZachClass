@@ -1,0 +1,40 @@
+[
+  {
+    "file": "OPENMC/examples/simple_tokamak/simple_tokamak_csg.py",
+    "url": "https://raw.githubusercontent.com/openmc-dev/openmc-performance-bench/fe41167856ce6a7d1dcd41b9551c77226b2536e6/benchmarks/models/simple_tokamak_csg.py",
+    "bytes": 310,
+    "sha256": "addbfb61347d9b5c493047fbe2192e14c10ba1e41253aca8cdc100c4e0eb905e"
+  },
+  {
+    "file": "OPENMC/examples/simple_tokamak/simple_tokamak_csg.xml",
+    "url": "https://raw.githubusercontent.com/openmc-dev/openmc-performance-bench/fe41167856ce6a7d1dcd41b9551c77226b2536e6/benchmarks/models/simple_tokamak_csg.xml",
+    "bytes": 88683,
+    "sha256": "c0a15d13dc1ea156bca6c2b9eb0af9a8029785ade9917bb37fdd3585ab0f66c9"
+  },
+  {
+    "file": "OPENMC/examples/nested_torii/nested_torii.py",
+    "url": "https://raw.githubusercontent.com/openmc-dev/openmc-performance-bench/fe41167856ce6a7d1dcd41b9551c77226b2536e6/benchmarks/models/nested_torii.py",
+    "bytes": 2296,
+    "sha256": "34da205ceca806512d5d35a32f5f5e956ef9c34c42727614407e0e9499e3fa02"
+  },
+  {
+    "file": "POPCON/references/FIRE/Meade_2002_Exploration_of_Burning_Plasmas.pdf",
+    "url": "https://fire.pppl.gov/fec2002_FT2_6_reprint4.pdf",
+    "bytes": 710557,
+    "sha256": "9738663c8e3b0148845945ea62a0f39e06460b8b67fb50c87a6a5adc706020b7"
+  },
+  {
+    "file": "POPCON/references/FIRE/Uckan_Wesley_Physics_Design_Guidelines.pdf",
+    "url": "https://fire.pppl.gov/ANS_Uckan_Wesley.pdf",
+    "bytes": 30691,
+    "sha256": "879909c70cbe57096bb45c77f0b5af79e256a6bf04683775161cd5d0314f31c7"
+  },
+  {
+    "file": "OPENMC/data/fendl32.tar.xz",
+    "url": "https://anl.box.com/shared/static/3cb7jetw7tmxaw6nvn77x6c578jnm2ey.xz",
+    "source_page": "https://openmc.org/data/",
+    "bytes": 335955104,
+    "sha256": "374d60526ff740ee2f6720524ad8dc3c76edb818bb257d1c72d8ed51c0739a2c",
+    "extracted_to": "OPENMC/data/fendl-3.2"
+  }
+]

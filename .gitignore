@@ -218,3 +218,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local class-project instructions and nuclear data
+AGENTS.md
+OPENMC/data/*
+!OPENMC/data/README.md
+
+# Simulation results
+outputs/

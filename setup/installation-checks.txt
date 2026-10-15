@@ -1,0 +1,30 @@
+Installation checks: 2026-10-14
+Environment: ZClass
+No transport simulations or POPCON scans were run.
+
+PASS import/version: python 3.12.15
+PASS import/version: openmc 0.16.0
+PASS import/version: openpopcon 2.2.0
+PASS import/version: cfspopcon 9.0.0
+PASS import/version: radas 1!1.0.1
+PASS import/version: numpy 2.4.6
+PASS import/version: scipy 1.18.1
+PASS import/version: numba 0.68.0
+PASS import/version: jupyterlab 4.6.4
+PASS import/version: ipykernel 7.4.0
+PASS import/version: jupytext 1.19.6
+Default OPENMC_CROSS_SECTIONS: /home/youeric/nuclear_data/endfb-viii.1/endfb-viii.1-hdf5/cross_sections.xml
+PASS data: ENDF/B-VIII.1; 768 referenced files exist; H1/Li6/Fe56/W184 HDF5 files open
+PASS data: FENDL 3.2; 253 referenced files exist; H1/Li6/Fe56/W184 HDF5 files open
+PASS model loads: OPENMC/examples/nested_torii/nested_torii.py; 102 cells
+  ENDF/B-VIII.1 missing nuclides: none
+  FENDL 3.2 missing nuclides: none
+PASS model loads: OPENMC/examples/simple_tokamak/simple_tokamak_csg.py; 168 cells
+  ENDF/B-VIII.1 missing nuclides: ['C0']
+  FENDL 3.2 missing nuclides: ['C0']
+PASS entry points: openmc --version, openpopcon --help, cfspopcon --help
+PASS dependencies: pip check reports no broken requirements
+PASS notebook kernel: Python (ZClass), installed inside ZClass
+PASS download integrity: all six SHA-256 hashes match local files
+PASS generated notebooks: valid format, compilable cells, no execution outputs
+PASS FIRE parameter CSV: 29 numeric rows, two operating regimes
