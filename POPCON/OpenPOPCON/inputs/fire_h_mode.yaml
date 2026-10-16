@@ -1,0 +1,52 @@
+# FIRE H-mode: Meade et al. (2002), Table I.
+# This is a teaching input, not a reconstruction of the original equilibrium.
+name: FIRE_H_mode
+R: 2.14                 # major radius [m]
+a: 0.595                # minor radius [m]
+kappa: 1.85             # use areal elongation for the single-shape model
+delta: 0.7              # separatrix triangularity
+I_P: 7.7                # plasma current [MA]
+B_0: 10.0               # field on axis [T]
+tipeak_over_tepeak: 1.0  # teaching assumption: Ti = Te
+fuel: 2                 # equal D-T mixture
+
+# Species are a modelling choice; Table I gives Zeff, not these concentrations.
+# OpenPOPCON adjusts argon to meet Zeff_target at its reference temperature.
+impurityfractions: [0.025, 0.0, 0.0, 0.0, 0.0, 0.0]
+Zeff_target: 1.5
+impurity: 2             # argon
+scalinglaw: H98y2
+H_fac: 1.03
+nr: 100
+gfilename: ""           # analytic geometry; no equilibrium file is required
+profsfilename: ""       # analytic profiles
+
+# f(rho)/f(0) = offset + (1-offset)*(1-rho^alpha1)^alpha2.
+# These give approximately n(0)/<n> = 1.1 and T(0)/<T> = 2.5.
+# The small temperature floor avoids a zero-temperature resistive edge.
+j_alpha1: 2.0
+j_alpha2: 3.0           # current profile is a teaching assumption
+j_offset: 0.01
+ne_alpha1: 2.0
+ne_alpha2: 0.1
+ne_offset: 0.0
+ni_alpha1: 2.0
+ni_alpha2: 0.1
+ni_offset: 0.0
+Ti_alpha1: 2.0
+Ti_alpha2: 1.58
+Ti_offset: 0.02
+Te_alpha1: 2.0
+Te_alpha2: 1.58
+Te_offset: 0.02
+
+# This package scans volume-average density divided by n_G and average Ti.
+Nn: 31
+NTi: 33
+nmin_frac: 0.2
+nmax_frac: 1.1
+Tmin_keV: 2.0
+Tmax_keV: 18.0
+resistivity_model: Jardin
+verbosity: 1
+parallel: false

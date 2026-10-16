@@ -23,16 +23,14 @@ was unnecessary. The existing `OpenMC` environment was left unchanged.
   FENDL 3.2 data, excluded from Git.
 - [POPCON/references/FIRE](POPCON/references/FIRE/README.md): two FIRE papers and
   a CSV of published machine parameters.
+- [POPCON tutorials](POPCON/README.md): OpenPOPCON and CFSPOPCON Python tutorials,
+  executed notebooks, local inputs, and setup notes.
 - [setup/installation-checks.txt](setup/installation-checks.txt): import,
   executable, dependency, model-loading, and data-file checks. No simulations
   or POPCON scans were run.
 - [setup/downloads.json](setup/downloads.json): download sources and SHA-256 hashes.
 
-OpenPOPCON includes worked examples. To copy them into this folder later:
-
-```bash
-openpopcon examples POPCON/examples/openpopcon
-```
+The POPCON tutorial folders include the upstream examples used in the lessons.
 
 Package documentation: [OpenPOPCON](https://github.com/hansec/OpenPOPCON) and
 [CFS POPCON](https://cfspopcon.readthedocs.io/en/latest/).

@@ -1,0 +1,112 @@
+#-----------------------------------------------------------------------
+# OpenPOPCON input file: SPARC
+#
+# SPARC, the compact high-field D-T tokamak being built by Commonwealth
+# Fusion Systems and MIT. Machine parameters from Creely et al., "Overview
+# of the SPARC tokamak", J. Plasma Phys. 86 (2020) 865860502.
+#
+# Parabolic profiles rather than a gEQDSK, deliberately: it keeps R, a,
+# kappa, delta and I_P available to POPCON_scan, which the gEQDSK path
+# overrides.
+#-----------------------------------------------------------------------
+
+name: "SPARC"
+
+#----------------------
+# Machine parameters
+#----------------------
+
+R: 1.85           # major radius, m (R_0 is accepted as an alias)
+a: 0.57           # minor radius, m
+kappa: 1.97       # elongation
+delta: 0.54       # triangularity
+
+I_P: 8.7          # plasma current, MA  (or give qstar instead)
+B_0: 12.2         # on-axis toroidal field, T  (or B_coil and wall_thickness)
+
+tipeak_over_tepeak: 0.9894
+
+#----------------------
+# Plasma composition
+#----------------------
+
+fuel: 2           # 1 D-D, 2 D-T, 3 D-He3
+
+# He, Ne, Ar, Kr, Xe, W
+impurityfractions: [0.025, 0., 0., 0., 0., 0.]
+
+# argon is the Zeff carrier; the fraction above is overwritten from this
+Zeff_target: 1.5
+impurity: 2       # 0 He, 1 Ne, 2 Ar, 3 Kr, 4 Xe, 5 W
+
+#----------------------
+# Confinement
+#----------------------
+
+scalinglaw: "H98y2"
+H_fac: 1.
+
+nr: 100           # number of radial points
+
+#----------------------
+# Profiles
+#----------------------
+
+gfilename: ""
+profsfilename: ""
+
+# f(rho) = (1 - offset) * (1 - rho^alpha1)^alpha2 + offset
+j_alpha1: 2.
+j_alpha2: 3.
+j_offset: 0.01
+
+ne_alpha1: 2.5
+ne_alpha2: 1.
+ne_offset: 0.4
+
+ni_alpha1: 2.5
+ni_alpha2: 1.
+ni_offset: 0.4
+
+Ti_alpha1: 2.
+Ti_alpha2: 3.5
+Ti_offset: 0.18
+
+Te_alpha1: 2.
+Te_alpha2: 3.5
+Te_offset: 0.18
+
+#----------------------
+# Algorithm settings
+#----------------------
+
+Nn: 50            # number of density points
+NTi: 50           # number of temperature points
+
+# n_G = Ip / (pi a^2) = 8.52e20 m^-3
+nmax_frac: 1.
+nmin_frac: 0.05
+
+Tmax_keV: 16.
+Tmin_keV: 3.
+
+resistivity_model: "Jardin"   # Jardin, Paz-Soldan, or maximum
+
+verbosity: 1
+parallel: True
+
+#----------------------
+# Scan (used by POPCON_scan; ignored by a plain POPCON)
+#----------------------
+
+# The major radius against the field, at fixed current. R_0 is scanned
+# here to show the alias; it replaces the R given above in every cell.
+scan:
+  rows:
+    parameter: R_0
+    values: [1.65, 1.85, 2.05]
+  cols:
+    parameter: B_0
+    min: 10.
+    max: 14.
+    N: 3

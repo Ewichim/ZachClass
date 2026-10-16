@@ -33,4 +33,4 @@ dependencies:
       - radas==1!1.0.1
 variables:
   # This link uses the existing library on this computer.
-  OPENMC_CROSS_SECTIONS: /home/youeric/ZachClass/OPENMC/data/endfb-viii.1/cross_sections.xml
+  OPENMC_CROSS_SECTIONS: /home/youeric/nuclear_data/endfb-viii.1/endfb-viii.1-hdf5/cross_sections.xml

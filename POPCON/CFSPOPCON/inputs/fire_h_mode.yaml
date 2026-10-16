@@ -1,0 +1,81 @@
+# FIRE H-mode: Meade et al. (2002), Table I.
+# Retain the core workflow; SPARC divertor/solenoid inputs do not describe FIRE.
+algorithms:
+  - read_atomic_data
+  - set_up_impurity_concentration_array
+  - calc_minor_radius_from_inverse_aspect_ratio
+  - calc_separatrix_elongation_from_areal_elongation
+  - calc_separatrix_triangularity_from_triangularity95
+  - calc_vertical_minor_radius_from_elongation_and_minor_radius
+  - calc_plasma_volume
+  - calc_plasma_surface_area
+  - calc_f_shaping_for_qstar
+  - calc_q_star_from_plasma_current
+  - calc_average_ion_mass
+  - calc_average_ion_temp_from_temperature_ratio
+  - calc_zeff_and_dilution_due_to_impurities
+  - calc_plasma_stored_energy
+  - read_confinement_scalings
+  - solve_energy_confinement_scaling_for_input_power
+  - calc_beta_toroidal
+  - calc_beta_poloidal
+  - calc_beta_total
+  - calc_beta_normalized
+  - calc_peak_electron_temp
+  - calc_peak_ion_temp
+  - define_radial_grid
+  - calc_analytic_profiles
+  - calc_intrinsic_radiated_power_from_core
+  - calc_bootstrap_fraction
+  - calc_inductive_plasma_current
+  - calc_Spitzer_loop_resistivity
+  - calc_resistivity_trapped_enhancement
+  - calc_neoclassical_loop_resistivity
+  - calc_loop_voltage
+  - calc_ohmic_power
+  - calc_fusion_power
+  - calc_auxiliary_power
+  - calc_fusion_gain
+  - calc_power_crossing_separatrix
+  - calc_LH_transition_threshold_power
+  - calc_ratio_P_LH
+  - calc_greenwald_density_limit
+  - calc_greenwald_fraction
+
+grid:
+  average_electron_density:  # CFS default density unit is 1e19 m^-3
+    min: 15.0
+    max: 75.0
+    num: 31
+  average_electron_temp:     # volume-average Te [keV]
+    min: 2.0
+    max: 18.0
+    num: 33
+
+major_radius: 2.14          # [m]
+inverse_aspect_ratio: 0.2780373831775701  # 0.595 / 2.14
+magnetic_field_on_axis: 10.0  # [T]
+plasma_current: 7.7e+6       # [A], unlike OpenPOPCON's MA input
+areal_elongation: 1.85
+elongation_ratio_sep_to_areal: 1.0810810810810811  # 2.0 / 1.85
+triangularity_psi95: 0.47
+triangularity_ratio_sep_to_psi95: 1.4893617021276595  # 0.7 / 0.47
+fusion_reaction: DTFusionBoschHale
+heavier_fuel_species_fraction: 0.5
+ion_to_electron_temp_ratio: 1.0  # teaching assumption
+electron_density_peaking: 1.1
+ion_density_peaking: 1.1       # assume the same shape as the electrons
+temperature_peaking: 2.5
+energy_confinement_scaling: ITER98y2
+confinement_time_scalar: 1.03
+confinement_threshold_scalar: 1.0
+fraction_of_external_power_coupled: 1.0  # use absorbed = launched for this example
+
+# Table I specifies Zeff = 1.5, not species. These assumed concentrations
+# give a calculated, temperature-dependent Zeff near that value.
+intrinsic_impurity_concentration:
+  Helium: 0.025
+  Argon: 0.0015
+radiated_power_method: Radas
+radiated_power_scalar: 1.0
+radas_dir: CASE_DIR/../radas_dir

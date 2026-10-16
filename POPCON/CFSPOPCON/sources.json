@@ -1,0 +1,30 @@
+{
+  "commit": "527ce6bd490a003a56e336dfa9a0949cd8d7ed1a",
+  "copied_files": [
+    {
+      "file": "inputs/upstream_SPARC_PRD/LICENSE",
+      "source": "https://raw.githubusercontent.com/cfs-energy/cfspopcon/527ce6bd490a003a56e336dfa9a0949cd8d7ed1a/LICENSE",
+      "sha256": "c3ed259e90399424d44a858c15509ea86a8ac3aae708c074db86286b869c0aa0"
+    },
+    {
+      "file": "inputs/upstream_SPARC_PRD/input.yaml",
+      "source": "https://raw.githubusercontent.com/cfs-energy/cfspopcon/527ce6bd490a003a56e336dfa9a0949cd8d7ed1a/example_cases/SPARC_PRD/input.yaml",
+      "sha256": "dbe0672010a4f01c2da641980b5252af8e8357249cec3a95deb4c5f7d19e4af2"
+    },
+    {
+      "file": "inputs/upstream_SPARC_PRD/plot_popcon.yaml",
+      "source": "https://raw.githubusercontent.com/cfs-energy/cfspopcon/527ce6bd490a003a56e336dfa9a0949cd8d7ed1a/example_cases/SPARC_PRD/plot_popcon.yaml",
+      "sha256": "4c81ef042edddba6aead62be2ce35b84f9bbc273dee114e44441e69b568a966a"
+    },
+    {
+      "file": "inputs/upstream_SPARC_PRD/plot_remapped.yaml",
+      "source": "https://raw.githubusercontent.com/cfs-energy/cfspopcon/527ce6bd490a003a56e336dfa9a0949cd8d7ed1a/example_cases/SPARC_PRD/plot_remapped.yaml",
+      "sha256": "cb4cc5f38017245e8afc9f1380dca8a724ef6c0037f7d781d5b830d84a04a083"
+    },
+    {
+      "file": "inputs/radas_upstream.yaml",
+      "source": "https://raw.githubusercontent.com/cfs-energy/cfspopcon/527ce6bd490a003a56e336dfa9a0949cd8d7ed1a/radas_config.yaml",
+      "sha256": "69764037cc07b50d245869479b4a11ef12e6054af8b559355b3fce2ecd1ca0c6"
+    }
+  ]
+}

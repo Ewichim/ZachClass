@@ -1,0 +1,37 @@
+#-----------------------------------------------------------------------
+# OpenPOPCON Plotting Settings: SPARC
+#
+# Only the entries that differ from resources/default_plotsettings.yml are
+# listed; anything left out falls back to the default.
+#
+# Densities are drawn as volume averages rather than Greenwald fractions.
+#-----------------------------------------------------------------------
+
+yax: "n20_av" # nG, n20_av or n20_ax
+xax: "T_i_av" # T_i_av, T_i_ax, T_e_av or T_e_ax; either axis takes either family
+figsize: [8,6]
+fill_invalid: True
+
+plotoptions:
+    Paux:
+        plot: True
+        color: r
+        linewidth: 3
+        label: $P_{aux}$
+        fontsize: 12
+        fmt: '%.2d'
+        spacing: manual
+        manuallevels: [0.1,1,10,25,50,100,500,2000]
+        scale: specified
+        levels: 10
+    betaN:
+        plot: True
+        color: forestgreen
+        linewidth: 2
+        label: $\beta_N$
+        fontsize: 12
+        fmt: '%.2f'
+        spacing: lin
+        manuallevels: [1,2,3]
+        scale: minmax
+        levels: 5

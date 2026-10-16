@@ -1,0 +1,15 @@
+{
+  "commit": "9e70f06df1e8c16df0191730036f5cd00d9e904c",
+  "copied_files": [
+    {
+      "file": "inputs/upstream_SPARC/POPCON_input_example.yaml",
+      "source": "https://raw.githubusercontent.com/hansec/OpenPOPCON/9e70f06df1e8c16df0191730036f5cd00d9e904c/openpopcon/resources/examples/SPARC/POPCON_input_example.yaml",
+      "sha256": "290f61562bd9eb3c891b76ab63bd086046fef55c1275edb60bdd0dd30142f7df"
+    },
+    {
+      "file": "inputs/upstream_SPARC/plotsettings.yml",
+      "source": "https://raw.githubusercontent.com/hansec/OpenPOPCON/9e70f06df1e8c16df0191730036f5cd00d9e904c/openpopcon/resources/examples/SPARC/plotsettings.yml",
+      "sha256": "e20b529d22770611de97f786cef07996ec771567fc75f44c7227821919aca42a"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+type: popcon
+figsize: [9, 6]
+show_dpi: 120
+legend_loc: upper left
+coords:
+  x:
+    dimension: average_electron_temp
+    label: '$\langle T_e\rangle$ [keV]'
+    units: keV
+  y:
+    dimension: average_electron_density
+    label: '$\langle n_e\rangle$ [$10^{20}$ m$^{-3}$]'
+    units: n20
+contour:
+  P_auxiliary_absorbed:
+    label: '$P_{aux,absorbed}$ [MW]'
+    units: MW
+    levels: [5, 15, 30, 60, 100]
+    color: tab:red
+    format: '.0f'
+  Q:
+    label: '$Q$'
+    levels: [1, 5, 10, 20]
+    color: tab:blue
+    format: '.0f'
+  P_fusion:
+    label: '$P_{fusion}$ [MW]'
+    units: MW
+    levels: [50, 150, 300]
+    color: tab:gray
+    format: '.0f'

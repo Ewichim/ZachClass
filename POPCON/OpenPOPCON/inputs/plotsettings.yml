@@ -1,0 +1,29 @@
+xax: T_i_av
+yax: n20_av
+figsize: [9, 6]
+fill_invalid: true
+plotoptions:
+  Paux:
+    plot: true
+    color: tab:red
+    linewidth: 1.5
+    label: '$P_{aux}$ [MW]'
+    fontsize: 9
+    spacing: manual
+    manuallevels: [0, 5, 15, 30, 60, 100]
+    scale: specified
+    levels: 6
+    fmt: '%.0f'
+  Q:
+    plot: true
+    color: tab:blue
+    linewidth: 1.5
+    label: '$Q$'
+    fontsize: 9
+    spacing: manual
+    manuallevels: [1, 5, 10, 20]
+    scale: specified
+    levels: 4
+    fmt: '%.0f'
+  betaN:
+    plot: false
