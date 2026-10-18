@@ -1,0 +1,52 @@
+# Paths are relative to this file. Source STEP files are never written.
+step_directory: ../step_files
+output_directory: outputs
+
+components:
+  - {file: Blanket.step, tag: shielding, color: '#dfb64c'}
+  - {file: CS Magnet.step, tag: cs_magnet, color: '#a55dc4'}
+  - {file: first_wall.step, tag: first_wall, color: '#d84d47'}
+  - {file: PF coils.step, tag: pf_coils, color: '#53a96b'}
+  - {file: Plamsa.step, tag: Vacuum, color: '#7acfe3'}
+  - {file: Toroidal.step, tag: tf_coils, color: '#d98842'}
+  - {file: Vaccume Vessel.step, tag: vacuum_vessel, color: '#718bb7'}
+
+units:
+  # STEP declares metres; OpenCascade's STEP importer normally returns mm.
+  # Inspection checks the reader's output unit and physical model dimensions.
+  imported_length_unit: mm
+  imported_to_cm: 0.1
+  expected_overall_diameter_m: [4.0, 20.0]
+
+inspection:
+  boolean_tolerance_mm: 0.00001
+  overlap_absolute_tolerance_mm3: 0.01
+  overlap_relative_tolerance: 1.0e-9
+  small_edge_mm: 0.1
+  small_face_mm2: 0.01
+  sample_angles: 72
+
+mesh:
+  profile: coarse
+  threads: 2
+  profiles:
+    # Surface edge lengths in output cm. Fine meshing can be expensive.
+    coarse: {min_cm: 0.5, max_cm: 15.0, first_wall_cm: 3.0}
+    fine: {min_cm: 0.2, max_cm: 5.0, first_wall_cm: 1.0}
+
+openmc:
+  # The same existing index configured in ZClass; no library is downloaded.
+  # An activated OPENMC_CROSS_SECTIONS setting takes precedence.
+  cross_sections: /home/youeric/nuclear_data/endfb-viii.1/endfb-viii.1-hdf5/cross_sections.xml
+  boundary_padding_cm: 50.0
+  particles: 1000
+  batches: 3
+  threads: 2
+  seed: 42
+  mesh_dimension: [40, 40, 40]
+  run_transport: true
+  # DAGMC boundary checks can report false overlaps: openmc issue #3023.
+  geometry_debug: false
+
+plots:
+  pixels: [1200, 1200]
